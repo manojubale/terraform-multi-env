@@ -33,6 +33,9 @@ jobs:
       - name: Check AWS Identity
         run: aws sts get-caller-identity
 
+      - name: Debug DynamoDB
+        run: aws dynamodb describe-table --table-name my-db-table
+
 
       - name: Terraform Init (Remote Backend)
         run: terraform init
