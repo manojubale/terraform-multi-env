@@ -51,5 +51,4 @@ jobs:
 
       # Optional Apply (Manual or Controlled)
       - name: Terraform Apply
-        if: github.event_name == 'workflow_dispatch'
         run: terraform apply -auto-approve
